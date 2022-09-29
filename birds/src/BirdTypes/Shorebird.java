@@ -1,11 +1,10 @@
-import java.util.ArrayList;
-import java.util.List;
+package BirdTypes;
 
 /**
  * @Description
  * @Author
  */
-public class Shorebird extends Bird{
+public class Shorebird extends Bird {
     public Shorebird() {
         super("shorebird", "They live near water sources including wetlands, freshwater and saltwater shorelands, even the ocean.", 2, "No");
 

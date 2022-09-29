@@ -1,10 +1,14 @@
+package Waterfowls;
+
+import BirdTypes.Waterfowl;
+
 import java.util.List;
 
 /**
  * @Description
  * @Author
  */
-public class Geese extends Waterfowl{
+public class Geese extends Waterfowl {
     private List<String> food;
     List<String> waterHabitat;
 

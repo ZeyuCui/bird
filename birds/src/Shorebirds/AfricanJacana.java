@@ -1,3 +1,7 @@
+package Shorebirds;
+
+import BirdTypes.Shorebird;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,7 +9,7 @@ import java.util.List;
  * @Description
  * @Author
  */
-public class AfricanJacana extends Shorebird{
+public class AfricanJacana extends Shorebird {
     private List<String> food;
     List<String> waterHabitat;
 

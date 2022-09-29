@@ -1,3 +1,5 @@
+package BirdTypes;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,7 +7,7 @@ import java.util.List;
  * @Description
  * @Author
  */
-public class Pigeon extends Bird{
+public class Pigeon extends Bird {
     private List<String> food;
 
     public Pigeon() {

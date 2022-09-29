@@ -1,3 +1,9 @@
+package Waterfowls;
+
+
+
+import BirdTypes.Waterfowl;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,7 +11,7 @@ import java.util.List;
  * @Description
  * @Author
  */
-public class Duck extends Waterfowl{
+public class Duck extends Waterfowl {
     private List<String> food;
     List<String> waterHabitat;
 
