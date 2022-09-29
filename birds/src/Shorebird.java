@@ -3,17 +3,16 @@
  * @Author
  */
 public class Shorebird extends Bird{
-    private String characteristic;
 
     public Shorebird() {
-        this.characteristic = "They live near water sources including wetlands, freshwater and saltwater shorelands, even the ocean.";
+        super("shorebird", "They live near water sources including wetlands, freshwater and saltwater shorelands, even the ocean.", 2, "No");
     }
 
-    public String getCharacteristic() {
-        return characteristic;
-    }
+    public Shorebird(String name, String characteristic, Integer wings, String isExtinct) {
+        super.setName(name);
+        super.setCharacteristic(characteristic);
+        super.setWings(wings);
+        super.setIsExtinct(isExtinct);
 
-    public void setCharacteristic(String characteristic) {
-        this.characteristic = characteristic;
     }
 }

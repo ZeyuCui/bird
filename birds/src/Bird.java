@@ -18,6 +18,9 @@ public class Bird {
 
     }
 
+    public Bird() {
+    }
+
     public String getName() {
         return name;
     }
@@ -41,5 +44,13 @@ public class Bird {
 
     public void setCharacteristic(String characteristic) {
         this.characteristic = characteristic;
+    }
+
+    public void setWings(Integer wings) {
+        this.wings = wings;
+    }
+
+    public void setIsExtinct(String isExtinct) {
+        this.isExtinct = isExtinct;
     }
 }

@@ -1,15 +1,14 @@
+import java.util.List;
+
 /**
  * @Description
  * @Author
  */
 public class GreatAuk extends Shorebird{
-    private String name;
-    private String isExtinct;
-    private String[] food;
-    private String[] waterHabitat;
+    private List<String> food;
 
     public GreatAuk() {
-        this.name = "great auk";
+        super("great auk", "The bird stood erect on land. It had a black back and head, a white front, and a large white spot between the bill and eye.", 2, "Yes");
 
     }
 }
