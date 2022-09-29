@@ -5,16 +5,18 @@ import java.util.List;
  * @Description
  * @Author
  */
-public class GreatAuk extends Shorebird{
+public class HornedPuffin extends Shorebird{
     private List<String> food;
     List<String> waterHabitat;
-    public GreatAuk() {
-        super("great auk", "The bird stood erect on land. It had a black back and head, a white front, and a large white spot between the bill and eye.", 2, "Yes");
+
+    public HornedPuffin() {
+        super("horned puffin", "They have a white breast and belly, and vivid orange feet.", 2, "No");
         food = new ArrayList<>();
+        food.add("aquatic invertebrates");
         food.add("fish");
         waterHabitat = new ArrayList<>();
-        waterHabitat.add("intertidal zone");
-        waterHabitat.add("Oceanic pelagic zone");
+        waterHabitat.add(" coastal cliffs");
+        waterHabitat.add("offshore islands");
     }
 
     public List<String> getFood() {

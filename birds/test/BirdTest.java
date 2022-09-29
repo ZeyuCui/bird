@@ -13,8 +13,7 @@ public class BirdTest {
         bird = new Bird();
     }
 
-    @Test
-    public testBird(){
-        assertEquals("")
-    }
+    //    public testBird(){
+//        assertEquals("")
+//    }
 }
