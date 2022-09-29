@@ -1,3 +1,5 @@
-public class FlightlessBird {
+import birdInterface.Bird;
+
+public class FlightlessBird implements Bird {
     //Flightless birds live on the ground and have no (or undeveloped) wings. They include the emus, kiwis, and moas. Some (but not all) of these birds are extinct.
 }
