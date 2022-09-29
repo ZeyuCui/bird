@@ -1,42 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Description
  * @Author
  */
 public class Owl extends Bird{
-    private String name;
-    private String characteristic;
-    private String isExtinct;
-    private String[] food;
+    private List<String> food;
 
     public Owl() {
-        super();
-        this.name = "owl";
-        this.characteristic = "Has a facial disk that frame the eyes and bill";
-        this.isExtinct = "No";
-        this.food = new String[]{"insects", "other birds", "small mammals", "fish"};
+        super("owl", "Has a facial disk that frame the eyes and bill", 2, "No");
+        this.food= new ArrayList<>();
+        food.add("insects");
+        food.add("other birds");
+        food.add("small mammals");
+        food.add("fish");
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getCharacteristic() {
-        return characteristic;
-    }
-
-    public String getExtinct() {
-        return isExtinct;
-    }
-
-    public String[] getFood() {
+    public List<String> getFood() {
         return food;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCharacteristic(String characteristic) {
-        this.characteristic = characteristic;
-    }
 }

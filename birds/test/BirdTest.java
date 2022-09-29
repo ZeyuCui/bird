@@ -15,6 +15,6 @@ public class BirdTest {
 
     @Test
     public testBird(){
-        assertEquals()
+        assertEquals("")
     }
 }

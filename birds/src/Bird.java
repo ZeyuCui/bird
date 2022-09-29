@@ -1,15 +1,45 @@
+import java.util.List;
+
 /**
  * @Description
  * @Author
  */
-public abstract class Bird {
-    private Integer wings; //All birds have two wings!
+public class Bird {
+    private String name;
+    private String characteristic;
+    private Integer wings;
+    private String isExtinct;
 
-    public Bird() {
-        this.wings = 2;
+    public Bird(String name, String characteristic, Integer wings, String isExtinct) {
+        this.wings = wings;
+        this.name = name;
+        this.characteristic = characteristic;
+        this.isExtinct = isExtinct;
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCharacteristic() {
+        return characteristic;
     }
 
     public Integer getWings() {
         return wings;
+    }
+
+    public String getIsExtinct() {
+        return isExtinct;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCharacteristic(String characteristic) {
+        this.characteristic = characteristic;
     }
 }
