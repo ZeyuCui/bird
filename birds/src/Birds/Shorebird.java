@@ -1,4 +1,4 @@
-package BirdTypes;
+package Birds;
 
 /**
  * @Description

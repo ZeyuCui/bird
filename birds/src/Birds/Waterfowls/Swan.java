@@ -1,6 +1,6 @@
-package Waterfowls;
+package Birds.Waterfowls;
 
-import BirdTypes.Waterfowl;
+import Birds.Waterfowl;
 
 import java.util.List;
 
@@ -8,11 +8,11 @@ import java.util.List;
  * @Description
  * @Author
  */
-public class Geese extends Waterfowl {
+public class Swan extends Waterfowl {
     private List<String> food;
     List<String> waterHabitat;
 
-    public Geese() {
+    public Swan() {
 
     }
 

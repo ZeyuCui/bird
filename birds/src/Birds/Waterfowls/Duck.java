@@ -1,8 +1,6 @@
-package Waterfowls;
+package Birds.Waterfowls;
 
-
-
-import BirdTypes.Waterfowl;
+import Birds.Waterfowl;
 
 import java.util.ArrayList;
 import java.util.List;

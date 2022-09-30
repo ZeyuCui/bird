@@ -1,6 +1,7 @@
-package Shorebirds;
+package Birds.Shorebirds;
 
-import BirdTypes.Shorebird;
+
+import Birds.Shorebird;
 
 import java.util.ArrayList;
 import java.util.List;

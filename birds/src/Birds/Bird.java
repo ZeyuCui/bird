@@ -1,6 +1,4 @@
-package BirdTypes;
-
-import java.util.List;
+package Birds;
 
 /**
  * @Description
