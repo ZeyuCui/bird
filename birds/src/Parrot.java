@@ -1,5 +1,3 @@
-package Birds;
-
 public class Parrot extends Bird {
     //BirdTypes.Parrots have a short, curved beak and are known for their intelligence and ability to mimic sounds.
     // Many pet parrots can learn a vocabulary of up to 100 words and often adopt a single "favorite" saying.
@@ -7,7 +5,7 @@ public class Parrot extends Bird {
     Integer vocabulary;
     String favoriteSaying;
     public Parrot() {
-        super("parrot","BirdTypes.Parrots have a short, curved beak and are known for their intelligence and ability to mimic sounds.\n" +
+        super("parrot","Parrots have a short, curved beak and are known for their intelligence and ability to mimic sounds.\n" +
                 "Many pet parrots can learn a vocabulary of up to 100 words and often adopt a single \"favorite\" saying.",2,"No");
     }
 

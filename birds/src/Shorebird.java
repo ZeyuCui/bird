@@ -1,5 +1,3 @@
-package Birds;
-
 /**
  * @Description
  * @Author
