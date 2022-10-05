@@ -2,7 +2,7 @@
  * @Description
  * @Author
  */
-public class Waterfowl extends BirdClass {
+public class Waterfowl extends BirdsNearWater{
     public Waterfowl() {
         super("waterfowl", "Live near water sources (fresh or salt) ", 2, "No");
 
