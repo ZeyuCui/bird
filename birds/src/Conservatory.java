@@ -3,7 +3,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-public class Conservatory {
+public class Conservatory {// a single conservatoryhi
+    private static final int maxNumber=20;
     //a conservatory has many aviaries
     private ArrayList<Aviary> myAviaries;
     //food needed for all the birds in the conservatory
@@ -28,7 +29,7 @@ public class Conservatory {
                 }
             }
         //if not check if we can create a new Aviary
-        if(canbeadd==false&&getNumOfAviaries()<20)
+        if(canbeadd==false&&getNumOfAviaries()<maxNumber)
         {
             Aviary a=new Aviary();
             a.addNewBird(b);
