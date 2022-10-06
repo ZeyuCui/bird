@@ -1,4 +1,4 @@
-public class Prey extends Bird {
+public class Prey extends BirdClass {
     //Birds of prey all have sharp, hooked beaks with visible nostrils. They include hawks, eagles, and osprey.
 
     public Prey() {

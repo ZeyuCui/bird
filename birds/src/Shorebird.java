@@ -2,7 +2,7 @@
  * @Description
  * @Author
  */
-public class Shorebird extends Bird {
+public class Shorebird extends BirdClass {
     public Shorebird() {
         super("shorebird", "They live near water sources including wetlands, freshwater and saltwater shorelands, even the ocean.", 2, "No");
 

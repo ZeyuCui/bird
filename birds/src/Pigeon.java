@@ -5,7 +5,7 @@ import java.util.List;
  * @Description
  * @Author
  */
-public class Pigeon extends Bird {
+public class Pigeon extends BirdClass {
     private List<String> food;
 
     public Pigeon() {

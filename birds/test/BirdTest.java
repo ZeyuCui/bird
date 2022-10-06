@@ -1,16 +1,15 @@
 import org.junit.Before;
-import org.junit.Test;
 
 /**
  * @Description
  * @Author
  */
 public class BirdTest {
-    private Bird bird;
+    private BirdClass birdClass;
 
     @Before
     public void setUp(){
-        bird = new Bird();
+        birdClass = new BirdClass();
     }
 
     //    public testBird(){
