@@ -5,6 +5,7 @@ public class Parrot extends BirdClass {
     Integer vocabulary;
     String favoriteSaying;
 
+    //@param: type: defines the specific type of a bird category, such as duck in waterfowl
     public Parrot(BirdsType type) {
         super.setType(type);
     }

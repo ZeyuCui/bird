@@ -1,17 +1,17 @@
+/*@Description: This is a class for Prey, extends from its parent class BirdClass.
+     An object can be instantiated at Driver class using this class.*/
 public class Prey extends BirdClass {
-    //Birds of prey all have sharp, hooked beaks with visible nostrils. They include hawks, eagles, and osprey.
 
+    //This is the characteristic of this bird category, it will be assigned to a String value in the constructor once an object of this bird category is created.
+    private static String characteristic = "Birds of prey all have sharp, hooked beaks with visible nostrils. They include hawks, eagles, and osprey.";
+
+    //The constructor will set the type of birds, its extinct status, wing numbers and characteristic for this bird category
+    //once the object is created
     public Prey(BirdsType type) {
         super.setType(type);
+        super.setExtinct(false);
+        super.setWings(2);
+        super.setCharacteristic(characteristic);
     }
 
-    public Prey(String name, Boolean isExtinct, BirdsType type) {
-        super(name, isExtinct);
-        super.setType(type);
-    }
-
-    public Prey(String name, Boolean isExtinct, Integer wings, BirdsType type) {
-        super(name, isExtinct, wings);
-        super.setType(type);
-    }
 }

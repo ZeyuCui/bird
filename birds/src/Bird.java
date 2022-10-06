@@ -1,7 +1,5 @@
 public interface Bird {
 
-    //get name of the bird
-    public String getName();
 
     //get type of the bird
     public BirdsType getType();

@@ -8,8 +8,6 @@ public class BirdClass implements Bird{
 
     //parent class of all the different type of birds
 
-    //name of that bird
-    private String name;
 
     //type of that bird
     private BirdsType type;
@@ -32,15 +30,11 @@ public class BirdClass implements Bird{
     public BirdClass() {
     }
 
-    public BirdClass(String name) {
-        this.name = name;
-    }
-    public BirdClass(String name, Boolean isExtinct) {
-        this.name = name;
+
+    public BirdClass( Boolean isExtinct) {
         this.isExtinct = isExtinct;
     }
-    public BirdClass(String name, Boolean isExtinct, Integer wings) {
-        this.name = name;
+    public BirdClass(Boolean isExtinct, Integer wings) {
         this.isExtinct = isExtinct;
         this.wings = wings;
     }
@@ -53,8 +47,7 @@ public class BirdClass implements Bird{
     }
 
 
-    public BirdClass(String name, BirdsType type, Category category, String characteristic, Integer wings, Boolean isExtinct, Map<Food, Integer> foodMap) {
-        this.name = name;
+    public BirdClass(BirdsType type, Category category, String characteristic, Integer wings, Boolean isExtinct, Map<Food, Integer> foodMap) {
         this.type = type;
         this.category = category;
         this.characteristic = characteristic;
@@ -63,8 +56,8 @@ public class BirdClass implements Bird{
         this.foodMap = foodMap;
     }
 
-    public String getName() {
-        return name;
+    public void setExtinct(Boolean extinct) {
+        isExtinct = extinct;
     }
 
     @Override
@@ -90,9 +83,6 @@ public class BirdClass implements Bird{
     }
 
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public void setCharacteristic(String characteristic) {
         this.characteristic = characteristic;
@@ -104,6 +94,10 @@ public class BirdClass implements Bird{
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public void setWings(Integer wings) {
+        this.wings = wings;
     }
 
     public Map<Food, Integer> getFoodMap() {
