@@ -24,25 +24,20 @@ public class Aviary {//a single aviary
 
     //check if we can add the bird into this aviary, if yes add it to the aviary and return true, else return false.
     public boolean checkAddNewBird(BirdClass bird){
+        if (bird.getIsExtinct()=="Yes")return false;
         if (getNumOfBirds()==maxNumber)return false;
         else {
             Category c=bird.getCategory();
             if((c==Category.FLIGHTLESS)&&(aviaryType==AviaryType.EMPTY||aviaryType==AviaryType.FLIGHTLESS)){
-                addNewBird(bird);
                 return true;
             }
             else if((c==Category.PREY)&&(aviaryType==AviaryType.EMPTY||aviaryType==AviaryType.PREY)){
-
-                addNewBird(bird);
                 return true;
             }
             else if((c==Category.WATERFOWL)&&(aviaryType==AviaryType.EMPTY||aviaryType==AviaryType.WATERFOWL)){
-
-                addNewBird(bird);
                 return true;
             }
             else if((c!=Category.FLIGHTLESS)&&(c!=Category.PREY)&&(c!=Category.WATERFOWL)&&(aviaryType==AviaryType.EMPTY||aviaryType==AviaryType.MIXED)){
-                addNewBird(bird);
                 return true;
             }
             else return false;
@@ -52,7 +47,7 @@ public class Aviary {//a single aviary
         Category c=bird.getCategory();
         birdsInAviary.add(bird);
         for (Food f:bird.getFoodMap().keySet()){
-            foodMap.put(f,foodMap.getOrDefault(f,0)+1);
+            foodMap.put(f,foodMap.getOrDefault(f,0)+bird.getFoodMap().get(f));
         }
         if((c==Category.FLIGHTLESS))aviaryType = AviaryType.FLIGHTLESS;
         else if(c==Category.PREY)aviaryType =AviaryType.PREY;
