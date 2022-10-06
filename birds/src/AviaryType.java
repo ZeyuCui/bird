@@ -1,0 +1,3 @@
+public enum AviaryType {
+    EMPTY,MIXED,FLIGHTLESS,PREY,WATERFOWL
+}
