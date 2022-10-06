@@ -20,7 +20,7 @@ public class Aviary {//a single aviary
     //check if we can add the bird into this aviary, if yes add it to the aviary and return true, else return false.
     public boolean checkAddNewBird(BirdClass bird){
         Category c=bird.getCategory();
-        if (this.birdsInAviary.size()==5)return false;
+        if (this.birdsInAviary.size()==maxNumber)return false;
         else {
             if((c==Category.FLIGHTLESS)&&(aviaryType==AviaryType.EMPTY||aviaryType==AviaryType.FLIGHTLESS)){
 
