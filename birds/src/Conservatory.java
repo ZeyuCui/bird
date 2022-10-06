@@ -1,11 +1,16 @@
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class Conservatory {
     //a conservatory has many aviaries
     private LinkedList<Aviary> myAviaries;
+    //food needed for all the birds in the conservatory
+    private Map<Food,Integer> foodMap;
 
     public Conservatory() {
         myAviaries=new LinkedList<>();
+        foodMap=new HashMap<Food, Integer>();
     }
     //get all the aviaries of this Conservatory
     public LinkedList<Aviary> getMyAviaries() {
@@ -22,6 +27,7 @@ public class Conservatory {
 
     //whether we can add a new bird to the Conservatory
     public boolean addNewBirdToConser(BirdClass b){
+        if(b.getIsExtinct()=="Yes")return false;
         boolean canbeadd=false;
         //check if we can add b to the existing aviaries
         for(Aviary a: myAviaries){
@@ -39,10 +45,12 @@ public class Conservatory {
             myAviaries.add(a);
             canbeadd=true;
         }
+        if (canbeadd==true){
+            for (Food f:b.getFoodMap().keySet()){
+                foodMap.put(f,foodMap.getOrDefault(f,0)+1);
+            }
+        }
         return canbeadd;
     }
-
-
-
 
 }
