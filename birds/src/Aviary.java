@@ -2,7 +2,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Aviary {//a single aviary
+public class Aviary {
+    /* a single aviary
+    * Allow you to rescue new birds and bring them into your aviary
+    * Calculate what food needs to be kept and in what quantities
+    * Assign a bird to an aviary in the conservatory.
+    */
 
     //No aviary can house more than 5 birds
     private static final int maxNumber=5;
@@ -17,14 +22,17 @@ public class Aviary {//a single aviary
 
 
 
-    //creat a new aviary
+    //creat a new aviary with no bird and an empty food map
     public Aviary(){
         birdsInAviary= new ArrayList<>();
         aviaryType=AviaryType.EMPTY;
         foodMap=new HashMap<Food,Integer>();
     }
 
-    //check if we can add the bird into this aviary, if yes add it to the aviary and return true, else return false.
+    /* check if we can add the bird into this aviary, if yes add it to the aviary and return true, else return false.
+    * @param bird: bird we want to check whether it is readable
+    * @return if it can be added, return true, else return false
+    */
     public boolean checkAddNewBird(BirdClass bird){
         if (bird.getIsExtinct()==true)return false;
         if (getNumOfBirds()==maxNumber)return false;
@@ -34,7 +42,11 @@ public class Aviary {//a single aviary
         }
     }
 
-    //check if the bird matches with the aviary
+    /* check if the bird matches with the aviary
+    * @param c: bird's category
+    * @param aviary type, the type of this aviary
+    * @return true,if type matched, else false
+     */
     private boolean checkTypeMatch(Category c, AviaryType aviaryType){
         if((c==Category.FLIGHTLESS)&&(aviaryType==AviaryType.EMPTY||aviaryType==AviaryType.FLIGHTLESS)){
             return true;
@@ -51,8 +63,10 @@ public class Aviary {//a single aviary
         else return false;
     }
 
-    //add bird into this aviary
-    public void addNewBird(BirdClass bird){
+    /* add bird into this aviary
+    * @param bird: bird user wants to add
+    */
+    protected void addNewBird(BirdClass bird){
         Category c=bird.getCategory();
         birdsInAviary.add(bird);
         for (Food f:bird.getFoodMap().keySet()){
@@ -64,7 +78,12 @@ public class Aviary {//a single aviary
         else aviaryType=AviaryType.MIXED;
     }
 
-    //check and add bird for a specific aviary
+    /* check and add bird for a specific aviary
+    * @param bird: bird we want to check and add
+    * @throws IllegalArgumentException if bird is extinct
+    * @throws RuntimeException if aviary is full
+    * @throws RuntimeException if type doesn't match
+    */
     public void checkAndAdd(BirdClass bird){
         if (bird.getIsExtinct()==true) throw new IllegalArgumentException("No extinct birds can be added to an aviary");
         Category c=bird.getCategory();
@@ -113,9 +132,8 @@ public class Aviary {//a single aviary
         this.birdsInAviary = birdsInAviary;
     }
 
-//    public String printAviarySign(){
-//
-//    }
+   public void printAviarySign(){
+   }
 
 
 }
