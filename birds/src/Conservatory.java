@@ -12,18 +12,6 @@ public class Conservatory {
         myAviaries=new LinkedList<>();
         foodMap=new HashMap<Food, Integer>();
     }
-    //get all the aviaries of this Conservatory
-    public LinkedList<Aviary> getMyAviaries() {
-        return myAviaries;
-    }
-    //set all the aviaries of this Conservatory
-    public void setMyAviaries(LinkedList<Aviary> myAviaries) {
-        this.myAviaries = myAviaries;
-    }
-    //get number of aviaries
-    public int getNumOfAviaries(){
-        return myAviaries.size();
-    }
 
     //whether we can add a new bird to the Conservatory
     public boolean addNewBirdToConser(BirdClass b){
@@ -47,10 +35,30 @@ public class Conservatory {
         }
         if (canbeadd==true){
             for (Food f:b.getFoodMap().keySet()){
-                foodMap.put(f,foodMap.getOrDefault(f,0)+1);
+                foodMap.put(f,foodMap.getOrDefault(f,0)+b.getFoodMap().get(f));
             }
         }
         return canbeadd;
+    }
+
+    //if a bird is in the conservatory, return the index of its aviary, else return 0;
+    public int lookUpBird(BirdClass b){
+       for (int i=0;i<myAviaries.size();i++){
+           if (myAviaries.get(i).getBirdsInAviary().contains(b))return i;
+       }
+       return 0;
+    }
+    //get all the aviaries of this Conservatory
+    public LinkedList<Aviary> getMyAviaries() {
+        return myAviaries;
+    }
+    //set all the aviaries of this Conservatory
+    public void setMyAviaries(LinkedList<Aviary> myAviaries) {
+        this.myAviaries = myAviaries;
+    }
+    //get number of aviaries
+    public int getNumOfAviaries(){
+        return myAviaries.size();
     }
 
 }
