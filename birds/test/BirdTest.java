@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Test;
 
 /**
  * @Description
@@ -9,10 +10,12 @@ public class BirdTest {
 
     @Before
     public void setUp(){
-        birdClass = new BirdClass();
+        birdClass = new Pigeon(BirdsType.RoseRingParakeet);
     }
-
-    //    public testBird(){
-//        assertEquals("")
-//    }
+    @Test
+    public void testCharacteristic(){
+        System.out.println(birdClass.getCharacteristic());
+        birdClass.setCharacteristic("aaa");
+        System.out.println(birdClass.getCharacteristic());
+    }
 }

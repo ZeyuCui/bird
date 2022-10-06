@@ -4,7 +4,7 @@ public interface Bird {
     public String getName();
 
     //get type of the bird
-    public String getType();
+    public BirdsType getType();
 
     //get category of the bird
     public Category getCategory();
@@ -16,5 +16,5 @@ public interface Bird {
     public Integer getWings();
 
     //get the whether the bird is extinct
-    public String getIsExtinct();
+    public Boolean getIsExtinct();
 }

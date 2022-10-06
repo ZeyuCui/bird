@@ -3,16 +3,24 @@
  * @Author
  */
 public class Waterfowl extends BirdsNearWater{
-    public Waterfowl() {
-        super("waterfowl", "Live near water sources (fresh or salt) ", 2, "No");
+    //Live near water sources (fresh or salt)
 
+    public Waterfowl(BirdsType type) {
+        super.setType(type);
     }
 
-    public Waterfowl(String name, String characteristic, Integer wings, String isExtinct) {
-        super.setName(name);
-        super.setCharacteristic(characteristic);
-        super.setWings(wings);
-        super.setIsExtinct(isExtinct);
+    public Waterfowl(String name, Boolean isExtinct, BirdsType type) {
+        super(name, isExtinct);
+        super.setType(type);
+    }
 
+    public Waterfowl(String name, Boolean isExtinct, int numOfWings, BirdsType type) {
+        super(name, isExtinct, numOfWings);
+        super.setType(type);
+    }
+
+    public Waterfowl(String name, Boolean isExtinct, int numOfWings, BodyOfWater waterType, BirdsType type) {
+        super(name, isExtinct, numOfWings, waterType);
+        super.setType(type);
     }
 }

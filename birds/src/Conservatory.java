@@ -15,7 +15,7 @@ public class Conservatory {
 
     //whether we can add a new bird to the Conservatory
     public boolean addNewBirdToConser(BirdClass b){
-        if(b.getIsExtinct()=="Yes")return false;
+        if(b.getIsExtinct()==true)return false;
         boolean canbeadd=false;
         //check if we can add b to the existing aviaries
         for(Aviary a: myAviaries){
@@ -44,7 +44,7 @@ public class Conservatory {
     //if a bird is in the conservatory, return the index of its aviary, else return 0;
     public int lookUpBird(BirdClass b){
        for (int i=0;i<myAviaries.size();i++){
-           if (myAviaries.get(i).getBirdsInAviary().contains(b))return i;
+           if (myAviaries.get(i).getBirdsInAviary().contains(b))return i + 1;
        }
        return 0;
     }

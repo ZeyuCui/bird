@@ -12,7 +12,7 @@ public class BirdClass implements Bird{
     private String name;
 
     //type of that bird
-    private String type;
+    private BirdsType type;
 
     //category of that bird
     private Category category;
@@ -24,7 +24,7 @@ public class BirdClass implements Bird{
     private Integer wings;
 
     //whether the bird is extinct
-    private String isExtinct;
+    private Boolean isExtinct;
 
     //what food needs to be kept and in what quantities for that bird in one day
     private Map<Food,Integer> foodMap;
@@ -35,9 +35,17 @@ public class BirdClass implements Bird{
     public BirdClass(String name) {
         this.name = name;
     }
+    public BirdClass(String name, Boolean isExtinct) {
+        this.name = name;
+        this.isExtinct = isExtinct;
+    }
+    public BirdClass(String name, Boolean isExtinct, Integer wings) {
+        this.name = name;
+        this.isExtinct = isExtinct;
+        this.wings = wings;
+    }
 
-
-    public BirdClass(Category category, String characteristic, Integer wings, String isExtinct) {
+    public BirdClass(Category category, String characteristic, Integer wings, Boolean isExtinct) {
         this.wings = wings;
         this.category = category;
         this.characteristic = characteristic;
@@ -45,7 +53,7 @@ public class BirdClass implements Bird{
     }
 
 
-    public BirdClass(String name, String type, Category category, String characteristic, Integer wings, String isExtinct, Map<Food, Integer> foodMap) {
+    public BirdClass(String name, BirdsType type, Category category, String characteristic, Integer wings, Boolean isExtinct, Map<Food, Integer> foodMap) {
         this.name = name;
         this.type = type;
         this.category = category;
@@ -60,7 +68,7 @@ public class BirdClass implements Bird{
     }
 
     @Override
-    public String getType() {
+    public BirdsType getType() {
         return type;
     }
 
@@ -77,7 +85,7 @@ public class BirdClass implements Bird{
         return wings;
     }
 
-    public String getIsExtinct() {
+    public Boolean getIsExtinct() {
         return isExtinct;
     }
 
@@ -94,11 +102,11 @@ public class BirdClass implements Bird{
         this.wings = wings;
     }
 
-    public void setIsExtinct(String isExtinct) {
+    public void setIsExtinct(Boolean isExtinct) {
         this.isExtinct = isExtinct;
     }
 
-    public void setType(String type) {
+    public void setType(BirdsType type) {
         this.type = type;
     }
 

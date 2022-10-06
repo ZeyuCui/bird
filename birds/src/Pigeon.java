@@ -6,18 +6,22 @@ import java.util.List;
  * @Author
  */
 public class Pigeon extends BirdClass {
-    private List<String> food;
-
-    public Pigeon() {
-        super("pigeon", "They can feed their young \"bird milk\" very similar to the milk of mammals", 2, "Some");
-        food = new ArrayList<>();
-        food.add("berries");
-        food.add("seeds");
-        food.add("fruit");
-        food.add("vegetation");
+    private static String characteristic = "They can feed their young \"bird milk\" very similar to the milk of mammals";
+    public Pigeon(BirdsType type) {
+        super.setType(type);
+        super.setCharacteristic(characteristic);
     }
 
-    public List<String> getFood() {
-        return food;
+    public Pigeon(String name, Boolean isExtinct, BirdsType type) {
+        super(name, isExtinct);
+        super.setType(type);
+        super.setCharacteristic(characteristic);
     }
+
+    public Pigeon(String name, Boolean isExtinct, Integer wings, BirdsType type) {
+        super(name, isExtinct, wings);
+        super.setType(type);
+        super.setCharacteristic(characteristic);
+    }
+
 }

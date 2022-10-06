@@ -6,19 +6,20 @@ import java.util.List;
  * @Author
  */
 public class Owl extends BirdClass {
-    private List<String> food;
+    //Has a facial disk that frame the eyes and bill
 
-    public Owl() {
-        super("owl", "Has a facial disk that frame the eyes and bill", 2, "No");
-        this.food= new ArrayList<>();
-        food.add("insects");
-        food.add("other birds");
-        food.add("small mammals");
-        food.add("fish");
+
+    public Owl(BirdsType type) {
+        super.setType(type);
     }
 
-    public List<String> getFood() {
-        return food;
+    public Owl(String name, Boolean isExtinct,BirdsType type) {
+        super(name, isExtinct);
+        super.setType(type);
     }
 
+    public Owl(String name, Boolean isExtinct, Integer wings,BirdsType type) {
+        super(name, isExtinct, wings);
+        super.setType(type);
+    }
 }

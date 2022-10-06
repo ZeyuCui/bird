@@ -1,15 +1,18 @@
 public class FlightlessBird extends BirdClass {
     //BirdTypes.Flightless birds live on the ground and have no (or undeveloped) wings. They include the emus, kiwis, and moas. Some (but not all) of these birds are extinct.
 
-    public FlightlessBird() {
-        super("flightless-bird","live on the ground and have no (or undeveloped) wings. They include the emus, kiwis, and moas. Some (but not all) of these birds are extinct.",0,"Some");
+
+    public FlightlessBird(BirdsType type) {
+        super.setType(type);
     }
 
+    public FlightlessBird(String name, Boolean isExtinct,BirdsType type) {
+        super(name, isExtinct);
+        super.setType(type);
+    }
 
-    public FlightlessBird(String name, String characteristic, Integer wings, String isExtinct) {
-        super.setName(name);
-        super.setCharacteristic(characteristic);
-        super.setWings(wings);
-        super.setIsExtinct(isExtinct);
+    public FlightlessBird(String name, Boolean isExtinct, Integer wings, BirdsType type) {
+        super(name, isExtinct, wings);
+        super.setType(type);
     }
 }

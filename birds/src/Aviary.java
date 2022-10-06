@@ -24,7 +24,7 @@ public class Aviary {//a single aviary
 
     //check if we can add the bird into this aviary, if yes add it to the aviary and return true, else return false.
     public boolean checkAddNewBird(BirdClass bird){
-        if (bird.getIsExtinct()=="Yes")return false;
+        if (bird.getIsExtinct()==true)return false;
         if (getNumOfBirds()==maxNumber)return false;
         else {
             Category c=bird.getCategory();
@@ -58,6 +58,10 @@ public class Aviary {//a single aviary
     public int getNumOfBirds(){
         return birdsInAviary.size();
     }
+    //determine whether this aviary is full
+    public Boolean isFull(){
+        return birdsInAviary.size() >= maxNumber;
+    }
     //get the type of the aviary
     public AviaryType getAviaryType() {
         return aviaryType;
@@ -77,6 +81,9 @@ public class Aviary {//a single aviary
         this.birdsInAviary = birdsInAviary;
     }
 
+//    public String printAviarySign(){
+//
+//    }
 
 
 }
