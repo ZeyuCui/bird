@@ -15,6 +15,8 @@ public class Aviary {//a single aviary
     //food needed for all the birds in the Aviary.
     private Map<Food,Integer> foodMap;
 
+
+
     //creat a new aviary
     public Aviary(){
         birdsInAviary= new ArrayList<>();

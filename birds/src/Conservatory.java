@@ -1,15 +1,17 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
 public class Conservatory {
     //a conservatory has many aviaries
-    private LinkedList<Aviary> myAviaries;
+    private ArrayList<Aviary> myAviaries;
     //food needed for all the birds in the conservatory
     private Map<Food,Integer> foodMap;
-
+    private Map<BirdsType, Integer> typeLocation;
     public Conservatory() {
-        myAviaries=new LinkedList<>();
+        myAviaries=new ArrayList<>();
+        typeLocation = new HashMap<>();
         foodMap=new HashMap<Food, Integer>();
     }
 
@@ -49,16 +51,28 @@ public class Conservatory {
        return 0;
     }
     //get all the aviaries of this Conservatory
-    public LinkedList<Aviary> getMyAviaries() {
+    public ArrayList<Aviary> getMyAviaries() {
         return myAviaries;
     }
     //set all the aviaries of this Conservatory
-    public void setMyAviaries(LinkedList<Aviary> myAviaries) {
+    public void setMyAviaries(ArrayList<Aviary> myAviaries) {
         this.myAviaries = myAviaries;
     }
     //get number of aviaries
     public int getNumOfAviaries(){
         return myAviaries.size();
     }
+    public String printMap(){
+        String str = "";
+        for(int i = 0; i < myAviaries.size();i++){
+            str += "Location " + i + 1;
+            ArrayList<BirdClass> bird = myAviaries.get(i).getBirdsInAviary();
+            for(BirdClass birdClass: bird){
+                str += " " + birdClass.getType();
+            }
 
+        }
+        str += "\n";
+        return str;
+    }
 }

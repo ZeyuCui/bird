@@ -98,14 +98,6 @@ public class BirdClass implements Bird{
         this.characteristic = characteristic;
     }
 
-    public void setWings(Integer wings) {
-        this.wings = wings;
-    }
-
-    public void setIsExtinct(Boolean isExtinct) {
-        this.isExtinct = isExtinct;
-    }
-
     public void setType(BirdsType type) {
         this.type = type;
     }
