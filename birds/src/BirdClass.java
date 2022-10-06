@@ -15,7 +15,7 @@ public class BirdClass implements Bird{
     private String type;
 
     //category of that bird
-    private String category;
+    private Category category;
 
     //characteristic of that bird
     private String characteristic;
@@ -27,7 +27,7 @@ public class BirdClass implements Bird{
     private String isExtinct;
 
     //what food needs to be kept and in what quantities for that bird in one day
-    private Map<String,Integer> foodMap;
+    private Map<Food,Integer> foodMap;
 
     public BirdClass() {
     }
@@ -37,7 +37,7 @@ public class BirdClass implements Bird{
     }
 
 
-    public BirdClass(String category, String characteristic, Integer wings, String isExtinct) {
+    public BirdClass(Category category, String characteristic, Integer wings, String isExtinct) {
         this.wings = wings;
         this.category = category;
         this.characteristic = characteristic;
@@ -45,7 +45,7 @@ public class BirdClass implements Bird{
     }
 
 
-    public BirdClass(String name, String type, String category, String characteristic, Integer wings, String isExtinct, Map<String, Integer> foodMap) {
+    public BirdClass(String name, String type, Category category, String characteristic, Integer wings, String isExtinct, Map<Food, Integer> foodMap) {
         this.name = name;
         this.type = type;
         this.category = category;
@@ -65,8 +65,8 @@ public class BirdClass implements Bird{
     }
 
     @Override
-    public String getCategory() {
-        return category;
+    public Category getCategory() {
+        return this.category;
     }
 
     public String getCharacteristic() {
@@ -102,15 +102,15 @@ public class BirdClass implements Bird{
         this.type = type;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 
-    public Map<String, Integer> getFoodMap() {
+    public Map<Food, Integer> getFoodMap() {
         return foodMap;
     }
 
-    public void setFoodMap(Map<String, Integer> foodMap) {
+    public void setFoodMap(Map<Food, Integer> foodMap) {
         this.foodMap = foodMap;
     }
 }

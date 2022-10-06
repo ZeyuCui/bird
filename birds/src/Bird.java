@@ -7,7 +7,7 @@ public interface Bird {
     public String getType();
 
     //get category of the bird
-    public String getCategory();
+    public Category getCategory();
 
     //get characteristic of the bird
     public String getCharacteristic();
