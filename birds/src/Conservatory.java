@@ -107,6 +107,24 @@ public class Conservatory {
         System.out.println(str);
     }
 
+    public String printDetails(int index){
+        String s = "";
+        Aviary aviary = myAviaries.get(index - 1);
+        ArrayList<BirdClass> birds = aviary.getBirdsInAviary();
+        for(BirdClass bird : birds){
+            s += bird.getType() + " " + bird.getCharacteristic() + " ";
+        }
+        return s;
+    }
+
+    public String printInOrder(){
+        HashMap<String, ArrayList<Integer>> map = new HashMap<>();
+        for(Aviary aviary : myAviaries){
+            for(BirdClass bird : aviary.getBirdsInAviary()){
+                HashMap
+            }
+        }
+    }
     //Print an index that lists all birds in the conservatory in alphabetical order and their location
     public void printIndex(){
 

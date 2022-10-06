@@ -5,19 +5,14 @@ public class Parrot extends BirdClass {
     Integer vocabulary;
     String favoriteSaying;
 
+    private static String characteristic = "Parrots have a short, curved beak and are known for their intelligence and ability to mimic sounds. Many pet parrots can learn a vocabulary of up to 100 words and often adopt a single \"favorite\" saying. ";
     //@param: type: defines the specific type of a bird category, such as duck in waterfowl
+
     public Parrot(BirdsType type) {
         super.setType(type);
-    }
-
-    public Parrot(String name, Boolean isExtinct,BirdsType type) {
-        super(name, isExtinct);
-        super.setType(type);
-    }
-
-    public Parrot(String name, Boolean isExtinct, Integer wings,BirdsType type) {
-        super(name, isExtinct, wings);
-        super.setType(type);
+        super.setExtinct(false);
+        super.setWings(2);
+        super.setCharacteristic(characteristic);
     }
 
     public void setVocabulary(Integer vocabulary) {

@@ -30,15 +30,6 @@ public class BirdClass implements Bird{
     public BirdClass() {
     }
 
-
-    public BirdClass( Boolean isExtinct) {
-        this.isExtinct = isExtinct;
-    }
-    public BirdClass(Boolean isExtinct, Integer wings) {
-        this.isExtinct = isExtinct;
-        this.wings = wings;
-    }
-
     public BirdClass(Category category, String characteristic, Integer wings, Boolean isExtinct) {
         this.wings = wings;
         this.category = category;

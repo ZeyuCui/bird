@@ -8,14 +8,8 @@ public class BirdsNearWater extends BirdClass{
     public BirdsNearWater() {
         super();
     }
-    public BirdsNearWater(String name, Boolean isExtinct) {
-        super(name, isExtinct);
-    }
-    public BirdsNearWater(String name, Boolean isExtinct, int numOfWings){
-        super(name, isExtinct, numOfWings);
-    }
-    public BirdsNearWater(String name, Boolean isExtinct, int numOfWings, BodyOfWater waterType){
-        super(name, isExtinct, numOfWings);
+    public BirdsNearWater(BodyOfWater waterType){
+        super();
         this.waterSources = waterType;
     }
 
