@@ -17,8 +17,10 @@ public class Conservatory {// a single conservatoryhi
     }
 
     //whether we can add a new bird to the Conservatory
-    public boolean addNewBirdToConser(BirdClass b){
-        if(b.getIsExtinct()==true)return false;
+    public void addNewBirdToConser(BirdClass b){
+        if(b.getIsExtinct()==true){
+            throw new IllegalArgumentException("No extinct birds can be added to a Conservatory");
+        }
         boolean canbeadd=false;
         //check if we can add b to the existing aviaries
         for(Aviary a: myAviaries){
@@ -36,12 +38,14 @@ public class Conservatory {// a single conservatoryhi
             myAviaries.add(a);
             canbeadd=true;
         }
+        else if (getNumOfAviaries()==maxNumber){
+            throw new RuntimeException("this bird can not be added to the conservatory because it's full or type doesn't match with the existing "+String.valueOf(maxNumber)+"aviaryies");
+        }
         if (canbeadd==true){
             for (Food f:b.getFoodMap().keySet()){
                 foodMap.put(f,foodMap.getOrDefault(f,0)+b.getFoodMap().get(f));
             }
         }
-        return canbeadd;
     }
 
     //if a bird is in the conservatory, return the index of its aviary, else return 0;
@@ -63,7 +67,9 @@ public class Conservatory {// a single conservatoryhi
     public int getNumOfAviaries(){
         return myAviaries.size();
     }
-    public String printMap(){
+
+    //Print a “map” that lists all the aviaries by location and the birds they house
+    public void printMap(){
         String str = "";
         for(int i = 0; i < myAviaries.size();i++){
             str += "Location " + i + 1;
@@ -74,6 +80,11 @@ public class Conservatory {// a single conservatoryhi
 
         }
         str += "\n";
-        return str;
+        System.out.println(str);
+    }
+
+    //Print an index that lists all birds in the conservatory in alphabetical order and their location
+    public void printIndex(){
+
     }
 }
