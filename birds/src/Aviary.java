@@ -137,4 +137,13 @@ public class Aviary {
    }
 
 
+   //print the food needed to be kept in this Aviary
+    public void printFoodNeeded() {
+        System.out.println("Here is the food needed to be kept in this Aviary");
+        for(Map.Entry e:foodMap.entrySet()){
+            System.out.println(e.getValue().toString()+" "+e.getKey().toString());
+        }
+        System.out.println("-----------------------------------------------------");
+        System.out.println();
+    }
 }
