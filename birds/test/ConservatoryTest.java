@@ -76,5 +76,18 @@ public class ConservatoryTest {
         conservatory1.printMap();
     }
 
+    @Test
+    public void testPrintDetails(){
+        for(int i = 0; i < 10; i++){
+            conservatory1.addNewBirdToConser(bird1);
+        }
+        for(int i = 0; i < 10; i++){
+            conservatory1.addNewBirdToConser(bird2);
+        }
+        for(int i = 0; i < 10; i++){
+            conservatory1.addNewBirdToConser(bird4);
+        }
+        conservatory1.printDetails(1);
+    }
 
 }

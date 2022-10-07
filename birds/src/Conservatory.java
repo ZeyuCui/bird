@@ -106,14 +106,14 @@ public class Conservatory {
         System.out.println(str);
     }
 
-    public String printDetails(int index){
+    public void printDetails(int index){
         String s = "";
         Aviary aviary = myAviaries.get(index - 1);
         ArrayList<BirdClass> birds = aviary.getBirdsInAviary();
         for(BirdClass bird : birds){
             s += bird.getType() + " " + bird.getCharacteristic() + " ";
         }
-        return s;
+        System.out.println(s);
     }
 
     public String printInOrder(){
