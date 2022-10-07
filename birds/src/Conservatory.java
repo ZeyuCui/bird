@@ -93,14 +93,14 @@ public class Conservatory {
     public void printMap(){
         String str = "";
         for(int i = 0; i < myAviaries.size();i++){
-            str += "Location " + i + 1;
+            str += "Location " + (i + 1) + ":";
             ArrayList<BirdClass> bird = myAviaries.get(i).getBirdsInAviary();
             for(BirdClass birdClass: bird){
                 str += " " + birdClass.getType();
             }
-
+            str += "\n";
         }
-        str += "\n";
+
         System.out.println(str);
     }
 
