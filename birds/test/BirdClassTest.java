@@ -23,11 +23,6 @@ public class BirdClassTest {
         BirdClass bird3 = new Parrot(BirdsType.Owls);
     }
 
-    //This test will throw exception an extinct bird type cannot be added into the aviary
-    @Test
-    public void testExtinctBirdObject(){
-        BirdClass bird3 = new FlightlessBird(BirdsType.Kiwis);
-    }
 
     //Test whether the BirdType of a BirdClass can be get correctly
     @Test
