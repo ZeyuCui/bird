@@ -71,7 +71,7 @@ public class Conservatory {
            if (myAviaries.get(i).getBirdsInAviary().contains(b))
            {
                flag=true;
-               System.out.println("this "+b.getCategory().toString()+"is in "+String.valueOf(i+1)+"'s aviary");
+               System.out.println("this "+b.getCategory().toString()+" is in "+String.valueOf(i+1)+"'s aviary");
            }
        }
        if(!flag)System.out.println("this bird is not in the conservatory");
