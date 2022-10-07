@@ -72,6 +72,8 @@ public class Conservatory {
            {
                flag=true;
                System.out.println("this "+b.getCategory().toString()+" is in "+String.valueOf(i+1)+"'s aviary");
+               System.out.println("-----------------------------------------------------");
+               System.out.println();
            }
        }
        if(!flag)System.out.println("this bird is not in the conservatory");
@@ -148,5 +150,14 @@ public class Conservatory {
     //Print an index that lists all birds in the conservatory in alphabetical order and their location
     public void printIndex(){
 
+    }
+    //print the food needed to be kept in this Conservatory
+    public void printFoodNeeded() {
+        System.out.println("Here is the food needed to be kept in this Conservatory");
+        for(Map.Entry e:foodMap.entrySet()){
+            System.out.println(e.getValue().toString()+" "+e.getKey().toString());
+        }
+        System.out.println("-----------------------------------------------------");
+        System.out.println();
     }
 }

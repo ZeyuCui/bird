@@ -52,10 +52,10 @@ public class main {
         conservatory.getMyAviaries().get(0).printAviarySign();
 
         //print food needed for an given Aviary
-        //conservatory.getMyAviaries().get(0).printFoodNeeded();
+        conservatory.getMyAviaries().get(0).printFoodNeeded();
 
         //print food needed for an given conservatory
-        //conservatory.printFoodNeeded();
+        conservatory.printFoodNeeded();
 
     }
 }
