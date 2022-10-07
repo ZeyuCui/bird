@@ -134,6 +134,17 @@ public class Aviary {
 
 
    public void printAviarySign(){
+
+       System.out.println();
+       String s="";
+       s+= "This Aviary is a "+aviaryType.toString()+" aviary\n";
+       for(BirdClass bird : birdsInAviary){
+           s += bird.getType() + ": " + bird.getCharacteristic() + " ";
+           s += "\n";
+       }
+       System.out.println(s);
+       System.out.println("----------------------------------------------------------------------------------------------------------");
+       System.out.println();
    }
 
 

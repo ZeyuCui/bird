@@ -39,11 +39,13 @@ public class main {
             }
         }
 
+        //print the detail of the first aviary
+        conservatory.printDetails(1);
         //print map
         conservatory.printMap();
 
         //print index
-        conservatory.printIndex();
+        conservatory.printInOrder();
 
         //lookup a bird
         conservatory.lookUpBird(birds[10]);
