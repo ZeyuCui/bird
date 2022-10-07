@@ -53,7 +53,7 @@ public class Conservatory {
             canbeadd=true;
         }
         else if (getNumOfAviaries()==maxNumber){
-            throw new RuntimeException("this bird can not be added to the conservatory because it's full or type doesn't match with the existing "+String.valueOf(maxNumber)+"aviaryies");
+            throw new RuntimeException("this bird can not be added to the conservatory because it's full or type doesn't match with the existing "+String.valueOf(maxNumber)+" aviaryies");
         }
         if (canbeadd==true){
             for (Food f:b.getFoodMap().keySet()){

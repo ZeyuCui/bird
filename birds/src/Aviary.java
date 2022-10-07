@@ -88,7 +88,7 @@ public class Aviary {
         if (bird.getIsExtinct()==true) throw new IllegalArgumentException("No extinct birds can be added to an aviary");
         Category c=bird.getCategory();
         if(birdsInAviary.size()==maxNumber) throw  new RuntimeException("this aviary is full");
-        if(!checkTypeMatch(bird.getCategory(),aviaryType)) throw new RuntimeException(bird.getCategory().toString()+ "can not be added to a "+aviaryType.toString()+"aviary");
+        if(!checkTypeMatch(bird.getCategory(),aviaryType)) throw new RuntimeException(bird.getCategory().toString()+ " can not be added to a "+aviaryType.toString()+" aviary");
         birdsInAviary.add(bird);
         //update food map of the aviary, add food needed by this bird into the food map
         for (Food f:bird.getFoodMap().keySet()){
@@ -139,6 +139,7 @@ public class Aviary {
 
    //print the food needed to be kept in this Aviary
     public void printFoodNeeded() {
+        System.out.println();
         System.out.println("Here is the food needed to be kept in this Aviary");
         for(Map.Entry e:foodMap.entrySet()){
             System.out.println(e.getValue().toString()+" "+e.getKey().toString());
