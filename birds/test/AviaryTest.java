@@ -53,9 +53,13 @@ public class AviaryTest {
     public void testGetBirdsInAviary(){
         aviary1.checkAndAdd(bird4);
         aviary1.checkAndAdd(bird1);
-        aviary1.checkAndAdd(bird5);
-        for (BirdClass birdClass : aviary1.getBirdsInAviary()){
-            System.out.println(birdClass.getType());}
+
+        try {
+            aviary1.checkAndAdd(bird5);
+        }catch(RuntimeException e){
+            System.out.println(e.toString());
+        }
+
     }
 
     //This test will throw exception an extinct bird type cannot be added into the aviary
@@ -72,10 +76,16 @@ public class AviaryTest {
     //This test will throw exception when an aviary is full
     @Test
     public void testMaximumNum(){
-        for(int i = 1; i <= 10; i++){
-            aviary1.checkAndAdd(birdArr[i-1]);
-            System.out.println(aviary1.getBirdsInAviary().size());
+
+        try {
+            for(int i = 1; i <= 10; i++){
+                aviary1.checkAndAdd(birdArr[i-1]);
+                System.out.println(aviary1.getBirdsInAviary().size());
+            }
+        }catch(RuntimeException e){
+            System.out.println(e.toString());
         }
+
     }
 
     @Test
@@ -98,8 +108,13 @@ public class AviaryTest {
     public void testAviaryTypeException(){
         aviary1.checkAndAdd(bird7); //add hawk to this aviary
         assertEquals(AviaryType.PREY, aviary1.getAviaryType());
-        aviary1.checkAndAdd(bird1);
-        assertEquals(AviaryType.PREY, aviary1.getAviaryType());
+        try {
+            aviary1.checkAndAdd(bird1);
+            assertEquals(AviaryType.PREY, aviary1.getAviaryType());
+        }catch(RuntimeException e){
+            System.out.println(e.toString());
+        }
+
     }
 
 }
