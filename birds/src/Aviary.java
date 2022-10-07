@@ -143,7 +143,7 @@ public class Aviary {
         for(Map.Entry e:foodMap.entrySet()){
             System.out.println(e.getValue().toString()+" "+e.getKey().toString());
         }
-        System.out.println("-----------------------------------------------------");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println();
     }
 }
