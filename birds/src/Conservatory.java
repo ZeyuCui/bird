@@ -108,6 +108,7 @@ public class Conservatory {
         System.out.println();
     }
 
+    //Print a sign for any given aviary that gives a description of the birds it houses and any interesting information that it may have about that animal.
     public void printDetails(int index){
         System.out.println();
         System.out.println("This is the info of aviary "+String.valueOf(index));
@@ -128,6 +129,7 @@ public class Conservatory {
         }
     }
 
+    //Print an index that lists all birds in the conservatory in alphabetical order and their location
     public void printInOrder(){
         System.out.println("All birds in the conservatory in alphabetical order and their location:");
         String str = "";
