@@ -9,12 +9,20 @@ public class BirdClassTest {
     private BirdClass bird2;
     private BirdClass bird4;
     private BirdClass bird5;
+    private BirdsNearWater bird6;
     @Before
     public void setUp(){
         bird1 = new Owl();
         bird2 = new Parrot(BirdsType.GrayParrot);
         bird4 = new Shorebirds(BirdsType.HornedPuffin);
         bird5 = new FlightlessBird(BirdsType.Emus);
+        bird6 = new Shorebirds(BirdsType.AfricanJacana, BodyOfWater.WETLANDS);
+    }
+
+    //Test whether we can get the water habitat of bird
+    @Test
+    public void testWaterBird(){
+        assertEquals(BodyOfWater.WETLANDS, bird6.getWaterSources());
     }
 
     //This test will throw exception because a bird type which don't belong to parrot's category is passed to parrot's constructor

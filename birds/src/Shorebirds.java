@@ -1,14 +1,17 @@
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @Description
- * @Author
- */
+/*@Description: This is a class for Shorebirds, extends from its parent class BirdClass.
+     An object can be instantiated at Driver class using this class.*/
+
 public class Shorebirds extends BirdsNearWater {
 
+    //This is the characteristic of this bird category, it will be assigned to a String value in the constructor once an object of this bird category is created.
 
     private static String characteristic = "They live near water sources including wetlands, freshwater and saltwater shorelands, even the ocean.";
+
+    //The constructor will set the type of birds, its extinct status, wing numbers , the type of water they live and characteristic for this bird category
+    //once the object is created
     public Shorebirds(BirdsType type) {
 
         if(type == BirdsType.GreatAuk){
