@@ -68,6 +68,7 @@ public class ConservatoryTest {
         }
         assertEquals(10, conservatory1.getNumOfAviaries());
     }
+    //Test to print a sign for any given aviary that gives a description of the birds it houses and any interesting information that it may have about that animal.
     @Test
     public void testPrintMap(){
         for(int i = 0; i < 50; i++){
