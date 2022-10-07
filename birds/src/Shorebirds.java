@@ -13,7 +13,6 @@ public class Shorebirds extends BirdsNearWater {
 
         if(type == BirdsType.GreatAuk){
             super.setExtinct(true);
-            throw new RuntimeException("An extinct bird type cannot be added into the aviary");
         }else{
             super.setExtinct(false);
         }
@@ -39,7 +38,7 @@ public class Shorebirds extends BirdsNearWater {
             super.setExtinct(false);
         }
         if (type != BirdsType.HornedPuffin && type != BirdsType.AfricanJacana){
-            throw new IllegalArgumentException("this bird doesn't belong to parrot's bird type");
+            throw new IllegalArgumentException("this bird doesn't belong to shore bird's bird type");
         }
         super.setType(type);
         super.setCategory(Category.SHOREBIRDS);

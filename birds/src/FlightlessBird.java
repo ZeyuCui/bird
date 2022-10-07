@@ -13,13 +13,11 @@ public class FlightlessBird extends BirdClass {
     public FlightlessBird(BirdsType type) {
         if(type == BirdsType.Kiwis || type == BirdsType.Moas){
             super.setExtinct(true);
-            throw new RuntimeException("An extinct bird type cannot be added into the aviary");
         }else {
             super.setExtinct(false);
         }
-        if (type != BirdsType.Emus){
-            throw new IllegalArgumentException("this bird doesn't belong to parrot's bird type");
-        }
+        if(type!= BirdsType.Emus&&type!=BirdsType.Kiwis&&type!=BirdsType.Moas)
+            throw new IllegalArgumentException("this bird doesn't belong to flight-less bird type");
         super.setType(type);
         super.setWings(0);
         super.setCharacteristic(characteristic);
