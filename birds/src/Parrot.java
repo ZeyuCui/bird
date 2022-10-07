@@ -25,6 +25,8 @@ public class Parrot extends BirdClass {
         food.put(Food.FRUIT,2);
         food.put(Food.SEEDS,3);
         super.setFoodMap(food);
+        vocabulary=200;
+        favoriteSaying="Peekaboo";
     }
 
     public void setVocabulary(Integer vocabulary) {
