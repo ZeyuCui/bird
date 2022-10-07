@@ -8,12 +8,16 @@ public class FlightlessBird extends BirdClass {
     //The constructor will set the type of birds, its extinct status, wing numbers and characteristic for this bird category
     //once the object is created
     public FlightlessBird(BirdsType type) {
-        super.setType(type);
         if(type == BirdsType.Kiwis || type == BirdsType.Moas){
             super.setExtinct(true);
+            throw new RuntimeException("An extinct bird type cannot be added into the aviary");
         }else {
             super.setExtinct(false);
         }
+        if (type != BirdsType.Emus){
+            throw new IllegalArgumentException("this bird doesn't belong to parrot's bird type");
+        }
+        super.setType(type);
         super.setWings(0);
         super.setCharacteristic(characteristic);
     }

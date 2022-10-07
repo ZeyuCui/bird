@@ -11,6 +11,7 @@ public class Pigeon extends BirdClass {
     //once the object is created
     public Pigeon() {
         super.setType(BirdsType.Pigeons);
+        super.setCategory(Category.PIGEONS);
         super.setExtinct(false);
         super.setWings(2);
         super.setCharacteristic(characteristic);

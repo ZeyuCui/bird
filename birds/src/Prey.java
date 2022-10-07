@@ -8,7 +8,11 @@ public class Prey extends BirdClass {
     //The constructor will set the type of birds, its extinct status, wing numbers and characteristic for this bird category
     //once the object is created
     public Prey(BirdsType type) {
+        if (type != BirdsType.Hawks && type != BirdsType.Eagles && type != BirdsType.Osprey){
+            throw new IllegalArgumentException("this bird doesn't belong to parrot's bird type");
+        }
         super.setType(type);
+        super.setCategory(Category.PREY);
         super.setExtinct(false);
         super.setWings(2);
         super.setCharacteristic(characteristic);

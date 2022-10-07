@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 public class Conservatory {
     /* a single conservatory
@@ -118,12 +115,35 @@ public class Conservatory {
     }
 
     public String printInOrder(){
+        String str = "";
         HashMap<String, ArrayList<Integer>> map = new HashMap<>();
+        PriorityQueue<Map.Entry<String, ArrayList<Integer>>> queue = new PriorityQueue<>();
+        int i = 1;
         for(Aviary aviary : myAviaries){
             for(BirdClass bird : aviary.getBirdsInAviary()){
-                HashMap
+                String birdStr = bird.getType().toString();
+                if(map.containsKey(birdStr)){
+                    map.get(birdStr).add(i);
+                }else{
+                    map.put(birdStr, new ArrayList<>());
+                    map.get(birdStr).add(i);
+                }
+
             }
         }
+        for(Map.Entry<String, ArrayList<Integer>> entry : map.entrySet()){
+            queue.add(entry);
+        }
+        while(!queue.isEmpty()){
+            Map.Entry<String, ArrayList<Integer>> entry = queue.poll();
+            ArrayList<Integer> arr = entry.getValue();
+            str += entry.getKey() + " ";
+            for(int num : arr){
+                str += "Location " + num + " ";
+            }
+        }
+        return str;
+
     }
     //Print an index that lists all birds in the conservatory in alphabetical order and their location
     public void printIndex(){

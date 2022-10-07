@@ -14,6 +14,7 @@ public class Owl extends BirdClass {
     //once the object is created
     public Owl() {
         super.setType(BirdsType.Owls);
+        super.setCategory(Category.OWLS);
         super.setExtinct(false);
         super.setWings(2);
         super.setCharacteristic(characteristic);

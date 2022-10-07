@@ -9,6 +9,10 @@ public class Parrot extends BirdClass {
     //@param: type: defines the specific type of a bird category, such as duck in waterfowl
 
     public Parrot(BirdsType type) {
+        if (type != BirdsType.RoseRingParakeet && type != BirdsType.GrayParrot && type != BirdsType.SulfurCrestedCockatoo){
+            throw new IllegalArgumentException("this bird doesn't belong to parrot's bird type");
+        }
+        super.setCategory(Category.PARROTS);
         super.setType(type);
         super.setExtinct(false);
         super.setWings(2);
