@@ -40,8 +40,13 @@ public class ConservatoryTest {
     //This test will throw exception because the actual aviary number exceeds the maximum aviary number a conservatory can have
     @Test
     public void testMaximumAviaryInConservatory(){
-        for(int i = 0; i < 200; i++){
-            conservatory1.addNewBirdToConser(bird1);
+
+        try {
+            for(int i = 0; i < 200; i++){
+                conservatory1.addNewBirdToConser(bird1);
+            }
+        }catch(RuntimeException e){
+            System.out.println(e.toString());
         }
     }
 

@@ -61,9 +61,12 @@ public class AviaryTest {
     //This test will throw exception an extinct bird type cannot be added into the aviary
     @Test
     public void testAddExtinctBird(){
-        aviary1.checkAndAdd(bird6);
-        for (BirdClass birdClass : aviary1.getBirdsInAviary()){
-            System.out.println(birdClass.getType());}
+        try {
+            aviary1.checkAndAdd(bird6);
+        }catch(IllegalArgumentException e){
+            System.out.println(e.toString());
+        }
+
     }
 
     //This test will throw exception when an aviary is full

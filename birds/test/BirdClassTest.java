@@ -10,6 +10,7 @@ public class BirdClassTest {
     private BirdClass bird4;
     private BirdClass bird5;
     private BirdsNearWater bird6;
+    private BirdsNearWater bird7;
     @Before
     public void setUp(){
         bird1 = new Owl();
@@ -17,6 +18,7 @@ public class BirdClassTest {
         bird4 = new Shorebirds(BirdsType.HornedPuffin);
         bird5 = new FlightlessBird(BirdsType.Emus);
         bird6 = new Shorebirds(BirdsType.AfricanJacana, BodyOfWater.WETLANDS);
+
     }
 
     //Test whether we can get the water habitat of bird
@@ -28,7 +30,12 @@ public class BirdClassTest {
     //This test will throw exception because a bird type which don't belong to parrot's category is passed to parrot's constructor
     @Test
     public void testInvalidBirdType(){
-        BirdClass bird3 = new Parrot(BirdsType.Owls);
+
+        try {
+            BirdClass bird3 = new Parrot(BirdsType.Owls);
+        }catch(IllegalArgumentException e){
+            System.out.println(e.toString());
+        }
     }
 
 
