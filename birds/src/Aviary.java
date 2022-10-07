@@ -100,11 +100,6 @@ public class Aviary {
         else aviaryType=AviaryType.MIXED;
     }
 
-    //Print a sign for any given aviary that gives a description of the birds it houses
-    // and any interesting information that it may have about that animal.
-    public void printSign(){
-
-    }
     // get the number of birds in this aviary
     public int getNumOfBirds(){
         return birdsInAviary.size();
@@ -132,7 +127,8 @@ public class Aviary {
         this.birdsInAviary = birdsInAviary;
     }
 
-
+    //Print a sign for any given aviary that gives a description of the birds it houses
+    // and any interesting information that it may have about that animal.
    public void printAviarySign(){
 
        System.out.println();

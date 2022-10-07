@@ -16,13 +16,11 @@ public class Conservatory {
     //food needed for all the birds in the conservatory
     private Map<Food,Integer> foodMap;
 
-    //
-    private Map<BirdsType, Integer> typeLocation;
+
 
     //constructor, create a new Conservatory with no aviary and an empty food map
     public Conservatory() {
         myAviaries=new ArrayList<>();
-        typeLocation = new HashMap<>();
         foodMap=new HashMap<Food, Integer>();
     }
 
