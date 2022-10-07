@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /*@Description: This is a class for Pigeon, extends from its parent class BirdClass.
      An object can be instantiated at Driver class using this class.*/
@@ -15,6 +17,12 @@ public class Pigeon extends BirdClass {
         super.setExtinct(false);
         super.setWings(2);
         super.setCharacteristic(characteristic);
+        Map food=new HashMap<Food,Integer>();
+        food.put(Food.NUTS,1);
+        food.put(Food.FRUIT,2);
+        food.put(Food.SEEDS,1);
+        food.put(Food.VEGETATION,2);
+        super.setFoodMap(food);
     }
 
 }

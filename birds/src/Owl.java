@@ -1,7 +1,9 @@
 import com.sun.org.glassfish.gmbal.Description;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /*@Description: This is a class for Owl, extends from its parent class BirdClass.
      An object can be instantiated at Driver class using this class.*/
@@ -18,6 +20,11 @@ public class Owl extends BirdClass {
         super.setExtinct(false);
         super.setWings(2);
         super.setCharacteristic(characteristic);
+        Map food=new HashMap<Food,Integer>();
+        food.put(Food.OTHER_BIRDS,1);
+        food.put(Food.SMALL_MAMMALS,3);
+        food.put(Food.FISH,2);
+        super.setFoodMap(food);
     }
 
 }

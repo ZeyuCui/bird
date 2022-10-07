@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -35,6 +36,8 @@ public class BirdClass implements Bird{
         this.category = category;
         this.characteristic = characteristic;
         this.isExtinct = isExtinct;
+        this.foodMap=new HashMap<Food,Integer>();
+        this.foodMap.put(Food.BIRDFOOD,1);
     }
 
 

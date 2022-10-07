@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /*@Description: This is a class for Flightless bird, extends from its parent class BirdClass.
      An object can be instantiated at Driver class using this class.*/
 public class FlightlessBird extends BirdClass {
@@ -20,6 +23,12 @@ public class FlightlessBird extends BirdClass {
         super.setType(type);
         super.setWings(0);
         super.setCharacteristic(characteristic);
+        Map food=new HashMap<Food,Integer>();
+        food.put(Food.INSECTS,1);
+        food.put(Food.FRUIT,2);
+        food.put(Food.SEEDS,3);
+        food.put(Food.VEGETATION,4);
+        super.setFoodMap(food);
     }
 
 }

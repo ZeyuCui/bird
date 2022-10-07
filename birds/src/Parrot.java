@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Parrot extends BirdClass {
     //BirdTypes.Parrots have a short, curved beak and are known for their intelligence and ability to mimic sounds.
     // Many pet parrots can learn a vocabulary of up to 100 words and often adopt a single "favorite" saying.
@@ -17,6 +20,11 @@ public class Parrot extends BirdClass {
         super.setExtinct(false);
         super.setWings(2);
         super.setCharacteristic(characteristic);
+        Map food=new HashMap<Food,Integer>();
+        food.put(Food.NUTS,5);
+        food.put(Food.FRUIT,2);
+        food.put(Food.SEEDS,3);
+        super.setFoodMap(food);
     }
 
     public void setVocabulary(Integer vocabulary) {

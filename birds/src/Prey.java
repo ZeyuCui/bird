@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /*@Description: This is a class for Prey, extends from its parent class BirdClass.
      An object can be instantiated at Driver class using this class.*/
 public class Prey extends BirdClass {
@@ -16,6 +19,11 @@ public class Prey extends BirdClass {
         super.setExtinct(false);
         super.setWings(2);
         super.setCharacteristic(characteristic);
+        Map food=new HashMap<Food,Integer>();
+        food.put(Food.INSECTS,1);
+        food.put(Food.SMALL_MAMMALS,2);
+        food.put(Food.OTHER_BIRDS,1);
+        super.setFoodMap(food);
     }
 
 }

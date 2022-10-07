@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Description
  * @Author
@@ -21,6 +24,11 @@ public class Shorebirds extends BirdsNearWater {
         super.setCategory(Category.SHOREBIRDS);
         super.setWings(2);
         super.setCharacteristic(characteristic);
+        Map food=new HashMap<Food,Integer>();
+        food.put(Food.FISH,5);
+        food.put(Food.INSECTS,2);
+        food.put(Food.AQUATIC_INVERTEBRATES,3);
+        super.setFoodMap(food);
     }
     public Shorebirds(BirdsType type, BodyOfWater waterType) {
         super(waterType);
