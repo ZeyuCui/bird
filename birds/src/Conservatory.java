@@ -72,7 +72,7 @@ public class Conservatory {
            {
                flag=true;
                System.out.println("this "+b.getCategory().toString()+" is in "+String.valueOf(i+1)+"'s aviary");
-               System.out.println("-----------------------------------------------------");
+               System.out.println("----------------------------------------------------------------------------------------------------------");
                System.out.println();
            }
        }
@@ -93,6 +93,8 @@ public class Conservatory {
 
     //Print a “map” that lists all the aviaries by location and the birds they house
     public void printMap(){
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        System.out.println();
         String str = "";
         for(int i = 0; i < myAviaries.size();i++){
             str += "Location " + (i + 1) + ":";
@@ -104,6 +106,8 @@ public class Conservatory {
         }
 
         System.out.println(str);
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        System.out.println();
     }
 
     public void printDetails(int index){
@@ -170,7 +174,7 @@ public class Conservatory {
         for(Map.Entry e:foodMap.entrySet()){
             System.out.println(e.getValue().toString()+" "+e.getKey().toString());
         }
-        System.out.println("-----------------------------------------------------");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println();
     }
 }
