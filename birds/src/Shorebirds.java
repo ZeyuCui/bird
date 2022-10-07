@@ -16,7 +16,7 @@ public class Shorebirds extends BirdsNearWater {
         }else{
             super.setExtinct(false);
         }
-        if (type != BirdsType.HornedPuffin && type != BirdsType.AfricanJacana){
+        if (type != BirdsType.GreatAuk && type != BirdsType.HornedPuffin && type != BirdsType.AfricanJacana){
             throw new IllegalArgumentException("this bird doesn't belong to parrot's bird type");
         }
         super.setType(type);
