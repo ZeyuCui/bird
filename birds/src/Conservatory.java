@@ -107,19 +107,30 @@ public class Conservatory {
     }
 
     public void printDetails(int index){
-        String s = "";
-        Aviary aviary = myAviaries.get(index - 1);
-        ArrayList<BirdClass> birds = aviary.getBirdsInAviary();
-        for(BirdClass bird : birds){
-            s += bird.getType() + " " + bird.getCharacteristic() + " ";
+        if(index <= myAviaries.size()){
+            String s = "";
+            Aviary aviary = myAviaries.get(index - 1);
+            ArrayList<BirdClass> birds = aviary.getBirdsInAviary();
+            for(BirdClass bird : birds){
+                s += bird.getType() + ": " + bird.getCharacteristic() + " ";
+                s += "\n";
+            }
+            System.out.println(s);
+        }else{
+            throw new IllegalArgumentException("The index is larger than total aviary number in the conservatory");
         }
-        System.out.println(s);
     }
 
-    public String printInOrder(){
+    public void printInOrder(){
         String str = "";
         HashMap<String, ArrayList<Integer>> map = new HashMap<>();
-        PriorityQueue<Map.Entry<String, ArrayList<Integer>>> queue = new PriorityQueue<>();
+        PriorityQueue<Map.Entry<String, ArrayList<Integer>>> queue = new PriorityQueue<>(
+                new Comparator<Map.Entry<String, ArrayList<Integer>>>() {
+                    @Override
+                    public int compare(Map.Entry<String, ArrayList<Integer>> o1, Map.Entry<String, ArrayList<Integer>> o2) {
+                        return o1.getKey().compareTo(o2.getKey());
+                    }
+                });
         int i = 1;
         for(Aviary aviary : myAviaries){
             for(BirdClass bird : aviary.getBirdsInAviary()){
@@ -132,6 +143,7 @@ public class Conservatory {
                 }
 
             }
+            i++;
         }
         for(Map.Entry<String, ArrayList<Integer>> entry : map.entrySet()){
             queue.add(entry);
@@ -143,8 +155,9 @@ public class Conservatory {
             for(int num : arr){
                 str += "Location " + num + " ";
             }
+            str += "\n";
         }
-        return str;
+        System.out.println(str);
 
     }
     //Print an index that lists all birds in the conservatory in alphabetical order and their location

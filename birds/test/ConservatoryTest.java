@@ -76,18 +76,50 @@ public class ConservatoryTest {
         conservatory1.printMap();
     }
 
+    //Test to print description of the birds it houses and any interesting information that it may have about that animal.
     @Test
     public void testPrintDetails(){
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 3; i++){
             conservatory1.addNewBirdToConser(bird1);
         }
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 3; i++){
             conservatory1.addNewBirdToConser(bird2);
         }
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 3; i++){
             conservatory1.addNewBirdToConser(bird4);
         }
-        conservatory1.printDetails(1);
+        conservatory1.printDetails(2);
     }
+
+    //When the index input is larger than the aviary number in the conservatory, it will throw exception
+    @Test
+    public void testPrintDetailsException(){
+        for(int i = 0; i < 3; i++){
+            conservatory1.addNewBirdToConser(bird1);
+        }
+        for(int i = 0; i < 3; i++){
+            conservatory1.addNewBirdToConser(bird2);
+        }
+        for(int i = 0; i < 3; i++){
+            conservatory1.addNewBirdToConser(bird4);
+        }
+        conservatory1.printDetails(2);
+    }
+
+    //Test to print an index that lists all birds in the conservatory in alphabetical order and their location
+    @Test
+    public void testPrintInOrder(){
+        for(int i = 0; i < 3; i++){
+            conservatory1.addNewBirdToConser(bird1);
+        }
+        for(int i = 0; i < 3; i++){
+            conservatory1.addNewBirdToConser(bird2);
+        }
+        for(int i = 0; i < 3; i++){
+            conservatory1.addNewBirdToConser(bird4);
+        }
+        conservatory1.printInOrder();
+    }
+
 
 }
