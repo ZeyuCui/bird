@@ -53,7 +53,7 @@ public class Conservatory {
             canbeadd=true;
         }
         else if (getNumOfAviaries()==maxNumber){
-            throw new RuntimeException("this bird can not be added to the conservatory because it's full or type doesn't match with the existing "+String.valueOf(maxNumber)+"aviaryies");
+            throw new RuntimeException("this bird can not be added to the conservatory because it's full or type doesn't match with the existing "+String.valueOf(maxNumber)+" aviaryies");
         }
         if (canbeadd==true){
             for (Food f:b.getFoodMap().keySet()){
@@ -93,8 +93,8 @@ public class Conservatory {
 
     //Print a “map” that lists all the aviaries by location and the birds they house
     public void printMap(){
-        System.out.println("----------------------------------------------------------------------------------------------------------");
         System.out.println();
+        System.out.println("This is the map of the Conservatory");
         String str = "";
         for(int i = 0; i < myAviaries.size();i++){
             str += "Location " + (i + 1) + ":";
@@ -111,21 +111,27 @@ public class Conservatory {
     }
 
     public void printDetails(int index){
+        System.out.println();
+        System.out.println("This is the info of aviary "+String.valueOf(index));
         if(index <= myAviaries.size()){
             String s = "";
             Aviary aviary = myAviaries.get(index - 1);
+            s+= "This Aviary is a "+aviary.getAviaryType().toString()+" aviary\n";
             ArrayList<BirdClass> birds = aviary.getBirdsInAviary();
             for(BirdClass bird : birds){
                 s += bird.getType() + ": " + bird.getCharacteristic() + " ";
                 s += "\n";
             }
             System.out.println(s);
+            System.out.println("----------------------------------------------------------------------------------------------------------");
+            System.out.println();
         }else{
             throw new IllegalArgumentException("The index is larger than total aviary number in the conservatory");
         }
     }
 
     public void printInOrder(){
+        System.out.println("All birds in the conservatory in alphabetical order and their location:");
         String str = "";
         HashMap<String, ArrayList<Integer>> map = new HashMap<>();
         PriorityQueue<Map.Entry<String, ArrayList<Integer>>> queue = new PriorityQueue<>(
@@ -162,12 +168,11 @@ public class Conservatory {
             str += "\n";
         }
         System.out.println(str);
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        System.out.println();
 
     }
-    //Print an index that lists all birds in the conservatory in alphabetical order and their location
-    public void printIndex(){
 
-    }
     //print the food needed to be kept in this Conservatory
     public void printFoodNeeded() {
         System.out.println("Here is the food needed to be kept in this Conservatory");

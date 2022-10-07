@@ -18,6 +18,7 @@ public class FlightlessBird extends BirdClass {
         }
         if(type!= BirdsType.Emus&&type!=BirdsType.Kiwis&&type!=BirdsType.Moas)
             throw new IllegalArgumentException("this bird doesn't belong to flight-less bird type");
+        super.setCategory(Category.FLIGHTLESS);
         super.setType(type);
         super.setWings(0);
         super.setCharacteristic(characteristic);

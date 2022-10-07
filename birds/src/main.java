@@ -1,8 +1,8 @@
 public class main {
     public static void main(String[] args) {
         //create 102 birds
-        BirdClass[] birds=new BirdClass[102];
-        for(int i=0;i<6;i++){
+        BirdClass[] birds=new BirdClass[119];
+        for(int i=0;i<7;i++){
             //Hawks, Eagles, Osprey, Emus, Kiwis, Moas, GreatAuk, HornedPuffin, AfricanJacana, Ducks, Swans, Geese, Owls, RoseRingParakeet, GrayParrot, SulfurCrestedCockatoo, Pigeons, NotRecord
             birds[i*17]=new Prey(BirdsType.Hawks);
             birds[i*17+1]=new Prey(BirdsType.Eagles);
@@ -39,11 +39,13 @@ public class main {
             }
         }
 
+        //print the detail of the first aviary
+        conservatory.printDetails(1);
         //print map
         conservatory.printMap();
 
         //print index
-        conservatory.printIndex();
+        conservatory.printInOrder();
 
         //lookup a bird
         conservatory.lookUpBird(birds[10]);
@@ -56,6 +58,19 @@ public class main {
 
         //print food needed for an given conservatory
         conservatory.printFoodNeeded();
+
+        //create a new aviary
+        Aviary aviary=new Aviary();
+        for(int i=0;i< 10;i++){
+            try {
+                aviary.checkAndAdd(birds[i]);
+            }
+            catch (RuntimeException e){
+                System.out.println("bird "+String.valueOf(i) +" is a "+birds[i].getType().toString()+" "+e.toString());
+            }
+        }
+        aviary.printAviarySign();;
+        aviary.printFoodNeeded();
 
     }
 }
